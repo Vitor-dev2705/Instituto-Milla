@@ -1,27 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   const services = [
     {
-      slug: "fisioterapia-motora",
+      slug: "fisioterapia_motora",
       title: "Fisioterapia Motora",
       description:
         "Reabilitação dos movimentos com foco em funcionalidade, autonomia e recuperação segura.",
     },
     {
-      slug: "fisioterapia-geriatrica",
+      slug: "fisioterapia_geriatrica",
       title: "Fisioterapia Geriátrica",
       description:
         "Cuidados especializados para a terceira idade, promovendo mobilidade e qualidade de vida.",
     },
     {
-      slug: "fisioterapia-pelvica",
+      slug: "fisioterapia_pelvica",
       title: "Fisioterapia Pélvica",
       description:
         "Tratamento das disfunções do assoalho pélvico com abordagem técnica e acolhedora.",
     },
     {
-      slug: "nutricao-clinica",
+      slug: "nutricao",
       title: "Nutrição Clínica",
       description:
         "Planejamento alimentar estratégico para equilíbrio metabólico e saúde integral.",
@@ -33,13 +34,13 @@ export default function Services() {
         "Acompanhamento emocional humanizado para fortalecimento e desenvolvimento pessoal.",
     },
     {
-      slug: "drenagem-linfatica",
+      slug: "drenagem_linfatica",
       title: "Drenagem Linfática",
       description:
         "Estimulação da circulação e redução de edemas com técnica especializada.",
     },
     {
-      slug: "liberacao-miofascial",
+      slug: "liberacao",
       title: "Liberação Miofascial",
       description:
         "Alívio de tensões musculares e melhora da mobilidade de forma eficaz.",
@@ -51,13 +52,13 @@ export default function Services() {
         "Terapia complementar que estimula a circulação e promove equilíbrio corporal.",
     },
     {
-      slug: "corrente-russa",
+      slug: "corrente_russa",
       title: "Corrente Russa",
       description:
         "Fortalecimento muscular e reabilitação através de estimulação elétrica controlada.",
     },
     {
-      slug: "kinesio-taping",
+      slug: "kinesio_taping",
       title: "Kinesio Taping",
       description:
         "Bandagem terapêutica para suporte muscular, estabilidade e alívio da dor.",
@@ -99,27 +100,42 @@ export default function Services() {
             <Link
               key={i}
               href={`/servicos/${service.slug}`}
-              className="group relative bg-white p-12 
-                         border border-[#EAE7E2]
+              className="group bg-white border border-[#EAE7E2] 
                          transition-all duration-500
                          hover:shadow-[0_30px_80px_rgba(0,0,0,0.06)]
-                         hover:-translate-y-2"
+                         hover:-translate-y-2 overflow-hidden"
             >
 
+              {/* IMAGEM */}
+              <div className="relative w-full h-60 overflow-hidden">
+                <Image
+                  src={`/${service.slug}.jpeg`}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-500"></div>
+              </div>
 
-              <h3 className="text-2xl font-light text-[#1C1C1C] mt-6 
-                             transition-all duration-400 
-                             group-hover:text-[#C6A75E]">
-                {service.title}
-              </h3>
+              {/* CONTEÚDO */}
+              <div className="p-12">
 
-              <p className="mt-6 text-[#6B6B6B] leading-relaxed">
-                {service.description}
-              </p>
+                <h3 className="text-2xl font-light text-[#1C1C1C] 
+                               transition-all duration-400 
+                               group-hover:text-[#C6A75E]">
+                  {service.title}
+                </h3>
+
+                <p className="mt-6 text-[#6B6B6B] leading-relaxed">
+                  {service.description}
+                </p>
+
+              </div>
 
               {/* Linha animada inferior */}
               <div className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#C6A75E] 
                               transition-all duration-500 group-hover:w-full"></div>
+
             </Link>
           ))}
 
