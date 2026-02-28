@@ -60,8 +60,8 @@ export default function Footer() {
               <MapPin size={16} className="text-[#C6A75E] shrink-0" />
               <span>
                 Brasília, DF<br />
-                Sua Localização Aqui, Edifício X<br />
-                Sala 000 — CEP 00000-000
+                Ed. Le Quartier - Av. Pau Brasil, L. 10 - Águas Claras, Brasília - DF, 71926-000
+                <br />
               </span>
             </div>
           </div>
