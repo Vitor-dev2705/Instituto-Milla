@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const navItems = [
   { label: "Serviços", href: "#servicos" },
   { label: "Sobre", href: "#sobre" },
+  { label: "Convênios", href: "#convenios" },
   { label: "Método", href: "#metodo" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
@@ -48,14 +49,14 @@ export default function Header() {
               scrolled ? "text-[#1C1C1C]" : "text-white"
             }`}
           >
-            <button id="#home">INSTITUTO MILLA</button>
+            <a href="#home">INSTITUTO MILLA</a>
           </h1>
           <div className="w-12 h-[1px] bg-[#C6A75E] mt-4 opacity-80"></div>
         </div>
 
-        {/* MENU DESKTOP */}
+        {/* MENU DESKTOP*/}
         <nav
-          className={`hidden xl:flex gap-20 text-[11px] tracking-[0.4em] uppercase ${
+          className={`hidden xl:flex gap-14 text-[11px] tracking-[0.4em] uppercase ${
             scrolled ? "text-[#6B6B6B]" : "text-white"
           }`}
         >
@@ -84,8 +85,7 @@ export default function Header() {
 
       {/* MOBILE MENU FULLSCREEN */}
       {menuOpen && (
-        <div className="xl:hidden fixed inset-0 bg-white/95 backdrop-blur-md z-40 flex flex-col items-center justify-center gap-10 text-[13px] tracking-[0.4em] uppercase text-[#1C1C1C]">
-          {/* BOTÃO DE FECHAR NO TOPO */}
+        <div className="xl:hidden fixed inset-0 bg-white/95 backdrop-blur-md z-40 flex flex-col items-center justify-center gap-8 text-[13px] tracking-[0.4em] uppercase text-[#1C1C1C] overflow-y-auto py-20">
           <button
             onClick={() => setMenuOpen(false)}
             className="absolute top-6 right-6 text-lg font-semibold text-[#1C1C1C] hover:text-[#C6A75E] transition"
@@ -96,7 +96,7 @@ export default function Header() {
           {navItems.map((item, index) => {
             if (item.label === "Serviços") {
               return (
-                <div key={index} className="flex flex-col items-center gap-2">
+                <div key={index} className="flex flex-col items-center gap-4">
                   <button
                     onClick={() => setServicesOpen(!servicesOpen)}
                     className="hover:text-[#C6A75E] transition duration-300 flex items-center gap-2"
@@ -112,7 +112,7 @@ export default function Header() {
                   </button>
 
                   {servicesOpen && (
-                    <div className="flex flex-col gap-2 mt-2">
+                    <div className="flex flex-col items-center gap-3 mt-2 bg-[#F7F5F2] p-6 rounded-sm">
                       {serviceItems.map((service, i) => (
                         <a
                           key={i}
@@ -121,7 +121,7 @@ export default function Header() {
                             setMenuOpen(false);
                             setServicesOpen(false);
                           }}
-                          className="text-[11px] tracking-[0.3em] text-[#6B6B6B] hover:text-[#C6A75E] transition duration-300"
+                          className="text-[10px] tracking-[0.3em] text-[#6B6B6B] hover:text-[#C6A75E] transition duration-300 text-center"
                         >
                           {service.label}
                         </a>
