@@ -3,6 +3,9 @@
 import { MessageCircle } from "lucide-react";
 
 export default function FloatingButton() {
+    const message = encodeURIComponent("Olá! Gostaria de agendar uma consulta.");
+    const whatsappLink = `https://wa.me/5561982057395?text=${message}`;
+
     return (
         <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-4">
 
@@ -17,11 +20,12 @@ export default function FloatingButton() {
             </div>
 
             <a
-                href="https://wa.me/5561982057395"
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group"
             >
+                {/* Efeito de Pulse/Ping para chamar atenção */}
                 <div className="absolute inset-0 bg-[#C6A75E] rounded-full animate-ping opacity-25"></div>
 
                 <div className="relative flex items-center justify-center w-16 h-16 bg-[#C6A75E] text-white rounded-full shadow-[0_15px_40px_rgba(198,167,94,0.4)] transition-all duration-500 group-hover:bg-[#1C1C1C] group-hover:scale-110">
