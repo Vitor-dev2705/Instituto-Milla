@@ -46,7 +46,7 @@ export default function Header() {
         <div className="flex flex-col items-center select-none">
           <h1
             className={`text-[11px] tracking-[0.75em] font-light transition duration-500 ${
-              scrolled ? "text-[#1C1C1C]" : "text-white"
+              scrolled ? "text-[#1C1C1C]" : "text-black"
             }`}
           >
             <a href="#home">INSTITUTO MILLA</a>
@@ -57,7 +57,7 @@ export default function Header() {
         {/* MENU DESKTOP*/}
         <nav
           className={`hidden xl:flex gap-14 text-[11px] tracking-[0.4em] uppercase ${
-            scrolled ? "text-[#6B6B6B]" : "text-white"
+            scrolled ? "text-[#6B6B6B]" : "text-black"
           }`}
         >
           {navItems.map((item, index) => (
