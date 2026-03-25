@@ -3,67 +3,79 @@ import Image from "next/image";
 
 export default function Banner() {
   return (
-    <section id="home" className="relative min-h-screen w-full flex flex-col lg:flex-row bg-[#F5F1EA] overflow-hidden">
-      
-      {/* Lado Esquerdo: Conteúdo e Tipografia */}
-      <div className="flex-1 flex items-center justify-center px-8 py-20 lg:py-0 z-10">
-        <div className="max-w-xl">
-          <span 
-            className="text-[10px] tracking-[0.6em] uppercase text-[#8C877F] block mb-8"
-            data-aos="fade-right"
-          >
-            Saúde Integrativa
-          </span>
+    <section id="home" className="relative min-h-screen w-full flex items-center justify-center text-white overflow-hidden bg-black">
+      {/* Camada de Fundo - Imagem Inteira, Nítida e Sem Blur */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/foto.jpg" // Certifique-se de que este arquivo existe na pasta public
+          alt="Instituto Milla Interior" 
+          fill
+          priority // Garante o carregamento imediato (LCP)
+          quality={100} // Máxima qualidade permitida pelo Next.js
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Overlay de Cinema (Essencial para o Menu Branco aparecer) */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.5),rgba(0,0,0,0.8))]" />
+      </div>
+
+      {/* Camada de Conteúdo Central (Gêmea da imagem) */}
+      <div className="relative z-10 text-center px-6 max-w-5xl">
+        <header className="space-y-10">
+          
+          <div className="overflow-hidden">
+            <span 
+              className="text-[10px] md:text-xs tracking-[0.8em] uppercase text-white font-medium block mb-4"
+              data-aos="fade-down"
+              
+            >
+              Fisioterapia & Terapias Integrativas
+            </span>
+          </div>
 
           <h1 
-            className="text-5xl md:text-7xl lg:text-[80px] font-light text-[#1C1C1C] leading-[1.1] tracking-tight mb-10"
+            className="font-playfair text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight leading-[1.05]"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Cuidado <br />
-            <span className="italic text-[#C6A75E]">com excelência</span>
+            A arte <span className="hidden md:inline">de cuidar</span> <br />
+            <span className="italic font-light text-[#C6A75E]">com excelência</span>
           </h1>
 
-          <p 
-            className="text-[#6B6B6B] text-lg font-light leading-relaxed mb-12 max-w-md"
-            data-aos="fade-up"
+          <div 
+            className="w-16 h-[1px] bg-[#C6A75E]/60 mx-auto" 
+            data-aos="width" 
             data-aos-delay="400"
+          />
+
+          <p 
+            className="max-w-2xl mx-auto text-lg md:text-xl text-white/80 font-light leading-relaxed tracking-wide"
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
-            Atendimento humanizado que une tecnologia e acolhimento para 
-            transformar sua qualidade de vida.
+            Atendimento humanizado que une tecnologia e acolhimento <br className="hidden md:block" />
+            para transformar a sua qualidade de vida com acolhimento e ciência.
           </p>
+        </header>
 
-          <div data-aos="fade-up" data-aos-delay="600">
-            <a 
-              href="#contato" 
-              className="inline-block px-12 py-5 bg-[#1C1C1C] text-white text-[10px] tracking-[0.4em] uppercase transition-all duration-500 hover:bg-[#C6A75E] hover:px-16"
-            >
-              Agendar Consulta
-            </a>
-          </div>
-        </div>
+        <footer 
+          className="mt-16 flex flex-col sm:flex-row justify-center gap-6"
+          data-aos="fade-up"
+          data-aos-delay="700"
+        >
+          {/* Botão idêntico ao da imagem (Fundo Oval) */}
+          <a 
+            href="#contato" 
+            className="px-14 py-5 bg-white text-black tracking-[0.25em] uppercase text-xs transition-all duration-500 hover:bg-[#C6A75E] hover:text-white rounded-full shadow-2xl"
+          >
+            Agendar Consulta
+          </a>
+        </footer>
       </div>
 
-      {/* Lado Direito: Imagem com Recorte Profissional */}
-      <div className="flex-1 relative min-h-[50vh] lg:min-h-screen overflow-hidden group">
-        <Image
-          src="/foto_servico.jpg"
-          alt="Instituto Milla"
-          fill
-          priority
-          quality={100}
-          className="object-cover transition-transform duration-[10s] group-hover:scale-110"
-        />
-        {/* Overlay lateral suave para transição entre foto e fundo */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F5F1EA] via-transparent to-transparent lg:block hidden w-32" />
-      </div>
-
-      {/* Detalhe Lateral Flutuante */}
-      <div className="absolute left-8 bottom-12 hidden lg:block opacity-30">
-        <div className="w-[1px] h-20 bg-[#1C1C1C] mx-auto mb-4" />
-        <p className="text-[10px] tracking-[0.5em] uppercase text-[#1C1C1C] rotate-180 [writing-mode:vertical-lr]">
-          Est. 2026
-        </p>
+      {/* Indicador de Rolagem Sutil (Opcional, mas dá o tom de luxo) */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-20">
+        <div className="w-[1px] h-12 bg-white" />
       </div>
     </section>
   );
