@@ -17,22 +17,22 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicos" className="bg-[#F5F1EA] py-40 md:py-48 px-6 overflow-hidden">
+    <section id="servicos" className="bg-[#F5F1EA] pt-12 pb-32 md:pt-20 md:pb-48 px-6 overflow-hidden">
       <div className="max-w-[1300px] mx-auto">
         
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs tracking-[0.6em] uppercase text-[#8C877F] block" data-aos="fade-up">
+          <span className="text-[10px] md:text-xs tracking-[0.6em] uppercase text-[#8C877F] block" data-aos="fade-up">
             Especialidades
           </span>
-          <h2 className="text-5xl md:text-6xl font-light mt-10 text-[#1C1C1C] leading-[1.1]" data-aos="fade-up" data-aos-delay="200">
+          <h2 className="text-4xl md:text-6xl font-light mt-6 text-[#1C1C1C] leading-[1.1] font-playfair" data-aos="fade-up" data-aos-delay="200">
             Cuidado completo
             <br />
             e personalizado
           </h2>
-          <div className="w-20 h-[1px] bg-[#C6A75E] mx-auto mt-12" data-aos="fade-right" data-aos-delay="400"></div>
+          <div className="w-16 md:w-20 h-[1px] bg-[#C6A75E] mx-auto mt-8" data-aos="fade-right" data-aos-delay="400"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 mt-28">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-14 mt-20">
           {services.map((service, i) => (
             <div 
               key={i} 
@@ -47,14 +47,14 @@ export default function Services() {
                   fill 
                   className="object-cover transition duration-700 group-hover:scale-110" 
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-500"></div>
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition duration-500"></div>
               </div>
 
-              <div className="p-12">
-                <h3 className="text-2xl font-light text-[#1C1C1C] transition-all duration-400 group-hover:text-[#C6A75E]">
+              <div className="p-8 md:p-10">
+                <h3 className="text-xl md:text-2xl font-light text-[#1C1C1C] transition-all duration-400 group-hover:text-[#C6A75E] font-playfair">
                   {service.title}
                 </h3>
-                <p className="mt-6 text-[#6B6B6B] leading-relaxed">
+                <p className="mt-4 text-sm md:text-base text-[#6B6B6B] leading-relaxed font-light">
                   {service.description}
                 </p>
               </div>
