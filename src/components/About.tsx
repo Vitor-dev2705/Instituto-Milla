@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="bg-[#F5F1EA] pt-24 pb-4 md:pt-40 md:pb-8 lg:pt-52 lg:pb-12 px-6 sm:px-12 overflow-hidden relative">
+    <section id="sobre" className="bg-[#F5F1EA] pt-20 pb-4 md:pt-40 md:pb-8 lg:pt-52 lg:pb-12 px-5 sm:px-12 overflow-hidden relative">
 
       <div className="absolute -right-20 top-1/4 opacity-[0.03] pointer-events-none select-none hidden 2xl:block">
         <span className="font-playfair text-[25vw] leading-none text-[#1C1C1C] tracking-tighter">Milla</span>
       </div>
 
       <div className="max-w-[1440px] mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 lg:gap-8 items-center">
 
           <div
             className="lg:col-span-5 relative w-full group"
@@ -48,7 +48,7 @@ export default function Sobre() {
               </div>
 
               <h2
-                className="font-playfair text-5xl md:text-7xl xl:text-[90px] font-light leading-[0.95] text-[#1C1C1C] tracking-tight"
+                className="font-playfair text-3xl sm:text-5xl md:text-7xl xl:text-[90px] font-light leading-[1] sm:leading-[0.95] text-[#1C1C1C] tracking-tight"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >

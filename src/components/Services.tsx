@@ -18,7 +18,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicos" className="bg-[#F5F1EA] pt-12 pb-32 md:pt-20 md:pb-48 px-6 overflow-hidden relative">
+    <section id="servicos" className="bg-[#F5F1EA] pt-12 pb-20 md:pt-20 md:pb-48 px-5 md:px-6 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#F5F1EA] to-transparent pointer-events-none z-10" />
 
       <div className="max-w-[1300px] mx-auto">
@@ -26,7 +26,7 @@ export default function Services() {
           <span className="text-[10px] md:text-xs tracking-[0.6em] uppercase text-[#8C877F] block" data-aos="fade-up">
             Especialidades
           </span>
-          <h2 className="text-4xl md:text-6xl font-light mt-6 text-[#1C1C1C] leading-[1.1] font-playfair" data-aos="fade-up" data-aos-delay="200">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-light mt-6 text-[#1C1C1C] leading-[1.1] font-playfair" data-aos="fade-up" data-aos-delay="200">
             Cuidado completo
             <br />
             e <span className="italic text-[#C6A75E]">personalizado</span>
@@ -37,7 +37,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mt-12 md:mt-20">
           {services.map((service, i) => (
             <div
               key={i}

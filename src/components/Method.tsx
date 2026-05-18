@@ -33,7 +33,7 @@ export default function Method() {
   return (
     <section
       id="metodo"
-      className="bg-[#1C1C1C] py-32 md:py-44 px-6 overflow-hidden relative"
+      className="bg-[#1C1C1C] py-20 md:py-32 lg:py-44 px-5 md:px-6 overflow-hidden relative"
     >
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_50%,#C6A75E_0%,transparent_50%)]" />
@@ -41,7 +41,7 @@ export default function Method() {
       </div>
 
       <div className="max-w-[1200px] mx-auto relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <span
             className="text-xs tracking-[0.5em] uppercase text-[#C6A75E] block"
             data-aos="fade-up"
@@ -50,7 +50,7 @@ export default function Method() {
           </span>
 
           <h2
-            className="text-4xl md:text-6xl font-playfair font-light mt-8 leading-[1.1] text-white"
+            className="text-3xl sm:text-4xl md:text-6xl font-playfair font-light mt-6 md:mt-8 leading-[1.1] text-white"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -66,7 +66,7 @@ export default function Method() {
           />
 
           <p
-            className="mt-10 text-lg text-white/50 leading-relaxed max-w-[640px] mx-auto font-light"
+            className="mt-8 md:mt-10 text-base md:text-lg text-white/50 leading-relaxed max-w-[640px] mx-auto font-light px-2"
             data-aos="fade-up"
             data-aos-delay="500"
           >
@@ -75,7 +75,7 @@ export default function Method() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-6">
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (

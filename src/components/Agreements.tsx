@@ -14,17 +14,17 @@ export default function Agreements() {
   ];
 
   return (
-    <section id="convenios" className="bg-white py-24 md:py-32 px-6 overflow-hidden relative">
+    <section id="convenios" className="bg-white py-16 md:py-24 lg:py-32 px-5 md:px-6 overflow-hidden relative">
       <div className="absolute top-12 right-12 opacity-[0.02] pointer-events-none hidden lg:block">
         <Shield size={400} strokeWidth={0.3} />
       </div>
 
       <div className="max-w-[1200px] mx-auto relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <span className="text-xs tracking-[0.5em] uppercase text-[#8C877F] block" data-aos="fade-up">
             Facilidades
           </span>
-          <h2 className="text-4xl md:text-5xl font-playfair font-light mt-6 text-[#1C1C1C]" data-aos="fade-up" data-aos-delay="200">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-light mt-6 text-[#1C1C1C]" data-aos="fade-up" data-aos-delay="200">
             Convênios <span className="italic text-[#C6A75E]">Atendidos</span>
           </h2>
           <div className="w-16 h-[1px] bg-[#C6A75E] mx-auto mt-8" data-aos="zoom-in" data-aos-delay="400" />

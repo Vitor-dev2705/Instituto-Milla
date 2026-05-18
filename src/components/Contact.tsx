@@ -31,14 +31,14 @@ export default function Contact() {
   };
 
   return (
-    <section id="contato" className="bg-[#F7F5F2] py-20 md:py-32 px-6 scroll-mt-32 relative overflow-hidden">
+    <section id="contato" className="bg-[#F7F5F2] py-16 md:py-32 px-5 md:px-6 scroll-mt-32 relative overflow-hidden">
       <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(198,167,94,0.04),transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-start relative z-10">
+      <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-start relative z-10">
         <div className="space-y-8" data-aos="fade-right">
           <div>
             <span className="text-[10px] tracking-[0.5em] uppercase text-[#C6A75E] font-bold block mb-4">Contato</span>
-            <h2 className="text-4xl md:text-6xl font-playfair font-light text-[#1C1C1C] leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-playfair font-light text-[#1C1C1C] leading-tight">
               Inicie sua jornada <br /> de <span className="italic text-[#C6A75E]">bem-estar.</span>
             </h2>
           </div>
@@ -69,7 +69,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="bg-white p-8 md:p-14 shadow-[0_40px_80px_rgba(0,0,0,0.06)] relative" data-aos="fade-left">
+        <div className="bg-white p-6 sm:p-8 md:p-14 shadow-[0_40px_80px_rgba(0,0,0,0.06)] relative" data-aos="fade-left">
           <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#C6A75E] via-[#C6A75E]/50 to-transparent" />
 
           <form onSubmit={handleSubmit} className="space-y-10">

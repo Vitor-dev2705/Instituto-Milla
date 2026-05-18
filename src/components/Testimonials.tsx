@@ -28,7 +28,7 @@ export default function Testimonials() {
   const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="depoimentos" className="bg-[#F5F1EA] py-32 md:py-44 px-6 relative overflow-hidden">
+    <section id="depoimentos" className="bg-[#F5F1EA] py-20 md:py-32 lg:py-44 px-5 md:px-6 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(198,167,94,0.04),transparent_70%)] pointer-events-none" />
 
       <div className="max-w-[900px] mx-auto text-center relative z-10">
@@ -40,7 +40,7 @@ export default function Testimonials() {
         </span>
 
         <h2
-          className="text-4xl md:text-5xl font-playfair font-light mt-8 text-[#1C1C1C] leading-[1.15]"
+          className="text-3xl sm:text-4xl md:text-5xl font-playfair font-light mt-6 md:mt-8 text-[#1C1C1C] leading-[1.15]"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -50,14 +50,14 @@ export default function Testimonials() {
 
         <div className="w-16 h-[1px] bg-[#C6A75E] mx-auto mt-10" data-aos="zoom-in" data-aos-delay="400" />
 
-        <div className="mt-20 relative" data-aos="fade-up" data-aos-delay="600">
+        <div className="mt-12 md:mt-20 relative" data-aos="fade-up" data-aos-delay="600">
           <div className="flex items-center justify-center mb-8">
             <Quote size={40} className="text-[#C6A75E]/20" strokeWidth={1} />
           </div>
 
           <div className="min-h-[200px] flex items-center justify-center">
             <div key={current} className="animate-fadeUp">
-              <p className="text-xl md:text-2xl italic text-[#6B6B6B] leading-relaxed max-w-[700px] mx-auto font-light">
+              <p className="text-lg sm:text-xl md:text-2xl italic text-[#6B6B6B] leading-relaxed max-w-[700px] mx-auto font-light px-2">
                 {testimonials[current].text}
               </p>
 
@@ -73,10 +73,10 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-8 mt-14">
+          <div className="flex items-center justify-center gap-6 sm:gap-8 mt-10 md:mt-14">
             <button
               onClick={prev}
-              className="w-12 h-12 flex items-center justify-center border border-[#EAE7E2] hover:border-[#C6A75E] hover:text-[#C6A75E] text-[#1C1C1C] transition-all duration-300"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-[#EAE7E2] hover:border-[#C6A75E] hover:text-[#C6A75E] text-[#1C1C1C] transition-all duration-300"
               aria-label="Anterior"
             >
               <ChevronLeft size={18} strokeWidth={1.5} />
@@ -97,7 +97,7 @@ export default function Testimonials() {
 
             <button
               onClick={next}
-              className="w-12 h-12 flex items-center justify-center border border-[#EAE7E2] hover:border-[#C6A75E] hover:text-[#C6A75E] text-[#1C1C1C] transition-all duration-300"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-[#EAE7E2] hover:border-[#C6A75E] hover:text-[#C6A75E] text-[#1C1C1C] transition-all duration-300"
               aria-label="Próximo"
             >
               <ChevronRight size={18} strokeWidth={1.5} />
