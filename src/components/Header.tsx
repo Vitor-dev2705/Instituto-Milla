@@ -98,8 +98,16 @@ export default function Header() {
       {/* MOBILE MENU FULLSCREEN */}
       {menuOpen && (
         <div
-          className="xl:hidden fixed inset-0 z-[200] flex flex-col items-center justify-center"
-          style={{ backgroundColor: "#F7F5F2" }}
+          className="xl:hidden flex flex-col items-center justify-center"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "#F7F5F2",
+            zIndex: 9999,
+          }}
         >
           {/* Botão fechar */}
           <button
