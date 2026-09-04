@@ -73,7 +73,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] tracking-[0.2em] uppercase text-[#666]">
           <p className="flex items-center gap-1">
-            © {new Date().getFullYear()} Instituto Milla. Feito com <Heart size={10} className="text-[#C6A75E] inline" fill="#C6A75E" /> em Brasília.
+            © {new Date().getFullYear()} Instituto Milla.
           </p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white transition-colors">Privacidade</a>
